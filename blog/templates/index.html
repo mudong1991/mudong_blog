@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{#定义左边内容块#}
+{% block left_content %}
+    <div class="content-left col-lg-8 col-md-8 col-sm-12 col-xs-12">
+        {# banner部分#}
+        {% include 'banner.html' %}
+        {# 文章列表部分#}
+        {% include 'article_list.html' %}
+        {% include 'pagination.html' %}
+    </div>
+{% endblock %}
+
+{#定义右边内容块#}
+{% block right_content %}
+    <div class="content-right col-lg-4 col-md-4 col-sm-12 col-xs-12">
+        {% include 'index_content_right.html' %}
+    </div>
+{% endblock %}

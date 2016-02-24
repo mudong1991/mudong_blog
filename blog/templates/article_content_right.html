@@ -1,0 +1,10 @@
+{% load staticfiles %}
+<!--搜索-->
+<div class="search">
+    <form method="post" action="{% url 'search' %}">
+        {% csrf_token %}
+        <input type="text" name="keywords" placeholder="请输入关键字" />
+        <input type="submit" value="搜索" />
+    </form>
+</div>
+{% include 'index_content_right.html' %}

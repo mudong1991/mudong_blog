@@ -1,0 +1,21 @@
+<ul class="pagination col-xs-3 pull-right">
+    {% if article_list.has_previous %}
+        <li><a href="?page={{ article_list.previous_page_number }}" title="上一页">&laquo;</a></li>
+    {% else %}
+        <li class="disabled"><a>&laquo;</a></li>
+    {% endif %}
+
+    {% for i in article_list_num_pages %}
+        {% if i == article_list.number %}
+            <li class="active"><a href="?page={{ i }}">{{ i }}</a></li>
+        {% else %}
+            <li><a href="?page={{ i }}">{{ i }}</a></li>
+        {% endif %}
+    {% endfor %}
+    
+    {% if article_list.has_next %}
+        <li><a href="?page={{ article_list.next_page_number }}" title="下一页">&raquo;</a></li>
+    {% else %}
+        <li class="disabled"><a>&raquo;</a></li>
+    {% endif %}
+</ul>

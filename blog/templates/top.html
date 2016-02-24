@@ -1,0 +1,59 @@
+<!--顶部信息-->
+{% load staticfiles %}
+<div class="back-img"></div>
+<div class="top navbar-fixed-top">
+    <div class="container">
+        <p class="pull-left">
+            欢迎光临慕冬的个人博客站！
+        </p>
+        <p class="pull-right">
+            <span>订阅本站</span>
+            <a href="#" class="top_rss"></a>
+        </p>
+    </div>
+</div>
+<!--头部log-->
+<head>
+    <div class="head container" id="top">
+        <h3>
+            <a href="index.html">{{ SITE_NAME }}</a>
+        </h3>
+        <p>
+            {% load upper %}
+            {% upper %}
+            {{ SITE_DESC }}
+            {% endupper %}
+        </p>
+    </div>
+</head>
+<!--导航栏-->
+<div class="mynavbar">
+    <nav class="navbar navbar-default container" role="navigation" id="mynav">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#my-navbar-collapse">
+                <span class="sr-only">切换导航</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            {% if title == title_index %}
+                <a class="navbar-brand" href="{% url 'index' %}" id="mynav-index-active">网站首页</a>
+            {% else %}
+                <a class="navbar-brand" href="{% url 'index' %}" id="mynav-index">网站首页</a>
+            {% endif %}
+
+        </div>
+        <div class="collapse navbar-collapse" id="my-navbar-collapse">
+            <ul class="nav navbar-nav">
+                <!--导航列表-->
+                {% for category_nav in category_list_nav %}
+                    {% if category_nav == category %}
+                        <li><a href="/category/{{ category_nav.name }}" id="my-navbar-list-active">{{ category_nav }}</a></li>
+                    {% else %}
+                        <li><a href="/category/{{ category_nav.name }}">{{ category_nav }}</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        </div>
+    </nav>
+</div>

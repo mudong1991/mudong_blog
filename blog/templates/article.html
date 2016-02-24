@@ -1,0 +1,297 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block head_js_css%}
+<link rel="stylesheet" type="text/css" href="{% static 'css/login_reg.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrapValidator.min.css' %}" />
+<script type="text/javascript" src="{% static 'js/bootstrapValidator.min.js' %}" ></script>
+{% endblock %}
+
+{% block top %}
+    <!--登录表单-->
+
+    <div class="box">
+
+        <div class="box-contain">
+            <div class="login-box">
+                <div class="login-title text-center">
+                    <h2><small>登录</small><i class="fa fa-remove"></i></h2>
+                </div>
+                <!--登录表单-->
+                <form action="{% url 'login_post' %}" method="post" id="login_form" class="form-horizontal">
+                    {% csrf_token %}
+                    <div class="form-group" >
+                        <label class="col-lg-3 col-md-3 col-sm-3 col-xs-12 control-label"><i class="glyphicon glyphicon-user"></i>用户名</label>
+                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                            {{ login_form.username }}
+                        </div>
+                    </div>
+                    <div class="form-group" >
+                        <label class="col-lg-3 col-md-3 col-sm-3 col-xs-12 control-label"><i class="glyphicon glyphicon-lock"></i>密码</label>
+                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                            {{ login_form.password }}
+                        </div>
+                    </div>
+
+                    <div class="form-group form-actions">
+                        <div class="col-xs-4 col-xs-offset-4 ">
+                            <button type="submit" class="btn btn-primary btn-lg"><i class="glyphicon glyphicon-check"></i> 登    录</button>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-xs-6 link">
+                            <p class="text-center remove-margin"><small>忘记密码？</small> <a href="javascript:void(0)"><small>找回</small></a>
+                            </p>
+                        </div>
+                        <div class="col-xs-6 link">
+                            <p class="text-center remove-margin"><small>还没注册?</small> <a href="javascript:void(0)"><small>注册</small></a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <input type="hidden" name="source_url" value="{{ request.META.HTTP_REFERER }}">
+                </form>
+                <!--登录表单end-->
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $('#login_form').bootstrapValidator({
+            message:'信息有误，登录失败',
+            feedbackIcons: {
+                valid: 'glyphicon glyphicon-ok',
+                invalid: 'glyphicon glyphicon-remove',
+                validating: 'glyphicon glyphicon-refresh'
+            },
+            fields:{
+                username:{
+                    message: '用户名信息有误',
+                    validators:{
+                        notEmpty: {
+                                message: '用户名不能为空!'
+                            },
+                        stringLength: {
+                            min: 1,
+                            max: 30,
+                            message: '用户名的长度必须在1-30个字符'
+                        },
+                        regexp: {
+                            regexp: /^[a-zA-Z0-9_\.]+$/,
+                            message: '用户名包含不合法字符'
+                        }
+                    }
+                },
+                password:{
+                    validators:{
+                        notEmpty: {
+                            message: '密码不能为空!'
+                        },
+                   }
+                }
+            }
+        })
+    })
+    </script>
+{% endblock %}
+
+{#定义文章左边内容块#}
+{% block left_content %}
+    <!--内容左边-->
+    <div class="article-content-left col-lg-8 col-md-8 col-sm-12 col-xs-12">
+        <h4 class="article-head">
+            <span>您当前的位置：</span>
+            <span><i class="fa fa-list-alt"></i> <a href="index.html">{{ article.category }}</a>  ></span>
+            <span><i class="fa fa-file-text"></i> <a href="index.html">{{ article.title }}</a></span>
+        </h4>
+        <div class="article-body">
+            <h3 class="article-body-head">{{ article.title }}</h3>
+            <p class="article-push-info">
+                <span><i class="fa fa-clock-o"></i>发布时间:{{ article.date_publish | date:'Y-m-d H:i:s' }}</span>
+                <span><i class="fa fa-user"></i>作者：{{ article.user }}</span>
+                <span><i class="fa fa-tags"></i>标签：
+                    {% for tag in article.tag.all  %}
+                        [<a href="/tag/{{ tag.name }}">{{ tag }}</a>]
+                    {% endfor %}
+                </span>
+                <span><i class="fa fa-eye"></i>点击数：{{ article.click_count }}</span>
+            </p>
+            <div class="article-content">
+               {{ article.content | safe}}
+            </div>
+            <!--网页分享代码-->
+            <div class="article-share">
+                <span>分享是一种快乐，也是一种美德:    </span><div class="bshare-custom icon-medium"><a title="分享到QQ空间" class="bshare-qzone"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到人人网" class="bshare-renren"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="分享到网易微博" class="bshare-neteasemb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a><span class="BSHARE_COUNT bshare-share-count">0</span></div><script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#style=-1&amp;uuid=&amp;pophcol=2&amp;lang=zh"></script><script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bshareC0.js"></script>
+            </div>
+        </div>
+        <div class="article-link">
+            <p>上一篇：
+                {% if article_previous %}
+                    <a href="{% url 'article' %}?id={{ article_previous.id }}">{{ article_previous }}</a>
+                {% else %}
+                    没有了
+                {% endif %}
+            </p>
+            <p>下一篇：
+                {% if article_next %}
+                    <a href="{% url 'article' %}?id={{ article_next.id }}">{{ article_next }}</a>
+                {% else %}
+                    没有了
+                {% endif %}
+            </p>
+        </div>
+
+        <!--相关文章-->
+        <div class="article-relevant">
+            <h3><i class="fa fa-bookmark"></i> 相关推荐</h3>
+            <ul class="clearfix">
+                {% for article_recommed in article_recommed_list %}
+                <li class="col-lg-6 col-md-6 col-sm-12 col-xs-12"><a href="{% url 'article' %}?id={{ article_recommed.id }}">{{ article_recommed.title }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <!--评论列表-->
+        <div class="article-comment" id="article-comment-h">
+            <h3><i class="fa fa-comments-o"></i> 发表评论</h3>
+            <p class="comment-user">
+                {% if request.user.is_authenticated %}
+                    <a href="{% if request.user.url %}{{ request.user.url }}{% else %}{{ SITE_URL }}{% endif %}" target="_blank"><img src="{% if request.user.avatar %}/uploads/{{ request.user.avatar }}{% else %}{% static 'images/default.jpg' %}{% endif %}"  class="user-avatar"/></a>
+                    <span>快来写点评论吧^.^  <b>{{ request.user.username }}</b></span>
+                    <a href="{% url 'logout_post' %}" class="pull-right"><b>&raquo;注销</b></a>
+                {% else %}
+                    <span>还没有登陆？可以登录后再评论哦。</span><b class="pull-right"><a href="javascript:void(0)" id="user_login">&raquo;去登录</a>&nbsp;<a href="{% url 'reg' %}" target="_blank">&raquo;去注册</a></b>
+                {% endif %}
+            </p>
+
+            <!--评论表单start-->
+            <form method="post" action="{% url 'comment_post' %}" id="comment_form">
+                {% csrf_token %}
+                <div class="form-group">{{ comment_form.comment }}</div>
+                <div class="comment-title form-group">
+                    <input type="submit" value="提交评论" class="comment-submit btn btn-primary"/>
+                </div>
+                <!--用户信息表单-->
+                <div class="comment-userform clearfix">
+                    <b class="pull-left col-lg-4 col-md-12 col-sm-12 col-sx-12">Hi，您需要填写昵称和邮箱！</b>
+                    <ul class="pull-left col-lg-8 col-md-12 col-sm-12 col-sx-12">
+                        <li class="form-group"><span>昵称(必填)</span>{{ comment_form.author }}</li>
+                        <li class="form-group"><span>邮箱(必填)</span>{{ comment_form.email }}</li>
+                        <li class="form-group"><span>网址(选填)</span>{{ comment_form.url }}</li>
+                    </ul>
+                    <span class="comment-userform-remove"><i class="fa fa-remove"></i></span>
+                </div>
+                {{ comment_form.article }}
+            </form>
+            <script type="text/javascript">
+                $(document).ready(function(){
+                    $('#comment_form').bootstrapValidator({
+                        message:'信息有误，登录失败',
+                        feedbackIcons: {
+                            valid: 'glyphicon glyphicon-ok',
+                            invalid: 'glyphicon glyphicon-remove',
+                            validating: 'glyphicon glyphicon-refresh'
+                        },
+                        fields:{
+                            comment:{
+                                validators:{
+                                    notEmpty: {
+                                        message: '评论内容不能为空!'
+                                    },
+                                }
+                            },
+                            author:{
+                                validators:{
+                                    notEmpty: {
+                                        message: '评论者名称不能为空!'
+                                    },
+                                    regexp: {
+                                        regexp: /^[a-zA-Z0-9_\.\W]+$/,
+                                        message: '名称含有非合法字符'
+                                    },
+                                }
+                            },
+                            email:{
+                               validators:{
+                                    notEmpty: {
+                                        message: '邮箱不能为空!'
+                                    },
+                                    emailAddress: {
+                                        message: '邮箱的格式不正确'
+                                    },
+                                }
+                            },
+                        }
+                    })
+                })
+            </script>
+            <!--评论表单end-->
+
+
+
+
+            <!--评论列表-->
+            <ul class="article-comment-list ">
+                <h4><span>{{ comment_num }}</span>条评论</h4>
+
+                {% for comment in comment_list%}
+                    <!--一条父评论start-->
+                    <li class="clearfix">
+                        <a target="_blank" href="{% if comment.user.url %}{{ comment.user.url }}{% else %}{{ SITE_URL }}{% endif %}"><img src="{% if comment.user.avatar %}/uploads/{{ comment.user.avatar }}{% else %}{% static 'images/default.jpg' %}{% endif %}" alt="头像" class="img-responsive comment-info-user-avatar pull-left"/></a>
+                        <div class="comment-info pull-left">
+                            <i class="comment-info-promt"></i>
+                            <p class="comment-info-content ">
+                                {{ comment.content }}
+                            </p>
+                            <p class="comment-info-user">
+                                <span><i class="fa fa-user"></i>
+                                    {% if comment.username %}
+                                        {{ comment.username }}
+                                    {% else %}
+                                        {{ comment.user }}
+                                    {% endif %}
+                                </span>
+                                <span><i class="fa fa-clock-o">{{ comment.date_publish | date:'Y-m-d H:i:s' }}</i></span>
+                                <span><a href="/comment/reply/{{ comment.id }}">回复</a></span>
+                            </p>
+                        </div>
+                    </li>
+                    <!--一条父评论end-->
+
+                    <!--子评论start-->
+                    {% for comment_children in comment.children_comment %}
+                        <li class="clearfix chlidren_comment">
+                            <a target="_blank" href="{% if comment.user.url %}{{ comment.user.url }}{% else %}{{ SITE_URL }}{% endif %}"><img src="{% if comment.user.avatar %}/uploads/{{ comment.user.avatar }}{% else %}{% static 'images/default.jpg' %}{% endif %}" alt="头像" class="img-responsive comment-info-user-avatar pull-left"/></a>
+                            <div class="comment-info pull-left">
+                                <i class="comment-info-promt"></i>
+                                <p class="comment-info-content ">
+                                    {{ comment_children.content }}
+                                </p>
+                                <p class="comment-info-user">
+                                    <span><i class="fa fa-user"></i>
+                                        {% if comment_children.username %}
+                                            {{ comment_children.username }}
+                                        {% else %}
+                                            {{ comment_children.user }}
+                                        {% endif %}
+                                    </span>
+                                    <span><i class="fa fa-clock-o">{{ comment_children.date_publish | date:'Y-m-d H:i:s' }}</i></span>
+                                    <span><a href="#article-comment-h">回复</a></span>
+                                </p>
+                            </div>
+                        </li>
+                    {% endfor %}
+                    <!--子评论end-->
+                {% endfor %}
+
+            </ul>
+        </div>
+    </div>
+{% endblock %}
+
+{#定义文章右边内容块#}
+{% block right_content %}
+    <div class="article-content-right col-lg-4 col-md-4 hidden-sm hidden-xs">
+        {% include 'article_content_right.html' %}
+    </div>
+{% endblock %}

@@ -1,0 +1,40 @@
+{% load staticfiles %}
+<div class="blog_list">
+    <!--一个文章信息start-->
+    {% for article in article_list %}
+    <div>
+        <h4><a href="{% url 'article' %}?id={{ article.id }}" target="_blank">{{ article.title }}</a></h4>
+        <ul class="clearfix">
+            <li class="pull-left">
+                <a href="{% url 'article' %}?id={{ article.id }}" class="blog_list_portal" target="_blank"><img src="/uploads/{{ article.portal }}" class="img-responsive"/></a>
+            </li>
+            <li>
+                <p>
+                    {% if article.desc %}
+                        {{ article.desc }}
+                    {% else %}
+                        {{ article.content | truncatewords:'250' }}
+                    {% endif %}
+                </p>
+            </li>
+            <li><a href="{% url 'article' %}?id={{ article.id }}" target="_blank">阅读全文>></a></li>
+            <li class="clearfix">
+                <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                    <span><i class="fa fa-clock-o"></i>{{ article.date_publish | date:'Y-m-d'  }}</span>
+                    <span><i class="fa fa-user"></i>编辑：{{ article.user }}</span>
+                    <span><i class="fa fa-tags"></i>
+                        {% for tag in article.tag.all %}
+                            [<a href="/tag/{{ tag.name }}" target="_blank">{{ tag }}</a>]
+                        {% endfor %}
+                    </span>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <b><i class="fa fa-comment-o"></i>评论(<a href="{% url 'article' %}?id={{ article.id }}#article-comment-h" target="_blank">{{ article.comment_set.all | length }}</a>)</b>
+                    <b><i class="fa fa-eye"></i>浏览(<a href="{% url 'article' %}?id={{ article.id }}" target="_blank">{{ article.click_count }}</a>)</b>
+                </div>
+            </li>
+        </ul>
+    </div>
+    {% endfor %}
+    <!--一个文章信息end-->
+</div>

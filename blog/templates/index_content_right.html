@@ -1,0 +1,151 @@
+{% load staticfiles %}
+<!--右边类容1-菜单栏-->
+<ul class="menu">
+    {% for category_right in category_list_right %}
+    <li><a href="/category/{{ category_right.name }}">{{ category_right }}</a></li>
+    {% endfor %}
+</ul>
+
+{% block common_content_right %}
+<!--右边类容2-关注我-->
+<div class="follow">
+    <h3><i class="fa fa-send-o"></i>关注我</h3>
+    <ul>
+        <li>
+            <a href="http://weibo.com/u/5061498639" target="_blank" class="follow-xinlang">
+                <i class="fa fa-weibo"></i>
+                <p class="follow-prompt">
+                    <span>新浪微博</span>
+                    <b></b>
+                </p>
+            </a>
+        </li>
+        <li>
+            <a href="http://t.qq.com/mudong19911103" target="_blank" class="follow-tengxun">
+                <i class="fa fa-tencent-weibo"></i>
+                <p class="follow-prompt">
+                    <span>腾讯微博</span>
+                    <b></b>
+                </p>
+            </a>
+        </li>
+        <li>
+            <a href="http://tieba.baidu.com/home/main?id=d4d26d75646f6e6731393931a521&fr=userbar"  target="_blank" class="follow-tieba">
+                <i class="fa fa-paw"></i>
+                <p class="follow-prompt">
+                    <span>百度贴吧</span>
+                    <b></b>
+                </p>
+            </a>
+        </li>
+        <li>
+            <a class="follow-weixin">
+                <i class="fa fa-weixin"></i>
+                <p class="follow-weixin-prompt">
+                    <span>订阅号“mudong1991”</span>
+                    <i><img src="{% static 'images/weixin.jpg' %}" width="175" height="175"></i>
+                    <b></b>
+                </p>
+            </a>
+        </li>
+        <li>
+            <a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=bVlaXFxbW15dVS0cHEMOAgA" class="follow-email" target="_blank">
+                <i class="fa fa-envelope-o"></i>
+                <p class="follow-prompt">
+                    <span>邮箱联系</span>
+                    <b></b>
+                </p>
+            </a>
+        </li>
+        <li>
+            <a href="tencent://message/?uin=471166308&Site=&Menu=yes" target="_blank" class="follow-qq">
+                <i class="fa fa-qq"></i>
+                <p class="follow-prompt">
+                    <span>联系QQ</span>
+                    <b></b>
+                </p>
+            </a>
+        </li>
+    </ul>
+</div>
+
+<!--网站公告-->
+<div class="notice">
+    <h3><i class="fa fa-volume-up"></i>公告</h3>
+</div>
+<div class="summary">
+    <span>
+        欢迎访问慕冬的个人博客站，你会在这里了解更多.......
+    </span>
+</div>
+
+<!--右边类容3-精彩文章推荐-->
+<div class="good-article">
+    <h3><i class="fa fa-coffee"></i>精彩文章推荐</h3>
+    <ul>
+        {% for article_recommed in article_recommed_list_right %}
+        <li><a target="_blank" href="{% url 'article' %}?id={{ article_recommed.id }}" title="{{ article_recommed }}">{{ article_recommed }}</a></li>
+        {% endfor %}
+    </ul>
+</div>
+
+<!--右边类容4-身份及广告-->
+<div class="mycard">
+    <h3><i class="fa fa-credit-card"></i>个人信息</h3>
+</div>
+<div class="vcard">
+    <a href="#"><img src="{% static 'images/photo.jpg' %}" class="pull-left img-responsive"></a>
+    <div class="vcard-info pull-left">
+        <p>姓名：母贤东</p>
+        <p>网名：东风残雪</p>
+        <p>职业：weber、pythoner</p>
+        <p>主页：<a href="http://www.xiandong.xyz" target="_blank">www.xiandong.xyz</a></p>
+        <p>现居：四川成都</p>
+    </div>
+</div>
+<div class="advert">
+    网站开发+QQ：471166308
+</div>
+
+<!--右边类容5-分享-->
+<div class="share">
+    <div class="bshare-custom icon-medium-plus">
+        <a title="分享到QQ空间" class="bshare-qzone"></a>
+        <a title="分享到新浪微博" class="bshare-sinaminiblog"></a>
+        <a title="分享到人人网" class="bshare-renren"></a>
+        <a title="分享到腾讯微博" class="bshare-qqmb"></a>
+        <a title="分享到网易微博" class="bshare-neteasemb"></a>
+        <a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a>
+        <span class="BSHARE_COUNT bshare-share-count">0</span></div>
+    <script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#style=-1&amp;uuid=&amp;pophcol=2&amp;lang=zh"></script>
+    <script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bshareC0.js"></script>
+</div>
+
+<!--右边类容6-最近访客-->
+<div class="visitor">
+    <h3><i class="fa fa-users"></i>最近访客</h3>
+    <ul class="ds-recent-visitors" data-num-items="12" data-avatar-size="40"></ul>
+    <!--多说js加载开始，一个页面只需要加载一次 -->
+    <script type="text/javascript">
+        var duoshuoQuery = {short_name:"http://dev.duoshuo.com/user/14076523"};
+        (function() {
+            var ds = document.createElement('script');
+            ds.type = 'text/javascript';ds.async = true;
+            ds.src = 'http://static.duoshuo.com/embed.js';
+            ds.charset = 'UTF-8';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+        })();
+    </script>
+    <!--多说js加载结束，一个页面只需要加载一次 -->
+</div>
+
+<!--右边类容7-标签云-->
+<div class="tag">
+    <h3><i class="fa fa-tags"></i>热门标签</h3>
+    <ul>
+        {% for tag_right in tag_list_right %}
+        <li><a href="/tag/{{ tag_right.name }}">{{ tag_right }}</a></li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

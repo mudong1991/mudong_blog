@@ -1,0 +1,172 @@
+/*左边类容*/
+.content-left{
+	background-color: rgba(255,255,255,0.6);
+	padding: 0;
+}
+/*主页index的右边类容样式*/
+/*推荐文章、生活分享、最新文章头部通用*/
+.recommend{
+	height: 40px;
+	border-bottom: 1px solid white;
+	position: relative;
+	overflow: hidden;
+}
+.recommend-head{
+	position: absolute;
+	bottom:-10px;left: 2%;
+	box-shadow: 4px 5px 1px #999;
+	background: #474645 none repeat scroll 0% 0%;
+	width: 24%;
+	height: 28px;
+	line-height: 28px;
+	color: white;
+	text-align: center;
+}
+.recommend-head b span{
+	color: #FD5DAA;
+	font-size: 14px;
+}
+/*轮播模块*/
+#myslider .sp-thumbnail-text {
+	width: 179px;
+    float: right;
+    height:100px;
+    padding: 6px 0 0 6px;
+    background-color: #F0F0F0;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    cursor:pointer;
+    transition: background 0.4s;
+}
+#myslider .sp-thumbnail-text:hover{
+	background: #F5DD7D none repeat scroll 0% 0%;
+}
+#myslider .sp-thumbnail-title {
+	margin-bottom: 5px;
+	text-transform: uppercase;
+	color: #EF7000;
+	font-size: 16px;
+	font-weight: bold;
+	text-overflow: ellipsis;
+}
+#myslider .sp-thumbnail-description {
+	font-size: 14px;
+	color: #333;
+	text-overflow: ellipsis;
+}
+/*生活分享*/
+.life-share{
+	width: 100%;
+	margin-bottom: -10px;
+}
+.life-share li{
+	/*float: left;*/
+	min-width: 142px;
+	max-height: 80px;
+	margin-left: 5%;
+	margin-top: 16px;
+	margin-bottom: 16px;
+	display: inline-block;
+}
+.life-share li img{
+	min-width: 142px;
+	max-height: 80px;
+	box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+	display: inline-block;
+	padding: 4px;
+	background:#FFF none repeat scroll 0% 0%;
+	transition: all 1s ease 0s;
+}
+.life-share li img:hover{
+	transform: scale(1.1);
+}
+/*博客文章列表*/
+.blog_list{
+	width: 96%;
+	margin: 16px auto;
+}
+.blog_list ul{
+	margin-bottom: 40px;
+	min-height: 120px;
+}
+.blog_list h4{
+	padding-left: 33px;
+	min-height: 26px;
+	background: transparent url(../images/libg_zhi.png) no-repeat left;
+}
+.blog_list h4 a{
+	text-overflow: ellipsis;
+	display: inline-block;
+	font-size: 15px;
+	height: 100%;
+	width: 100%;
+	color:black;
+	font-weight: bold;
+	line-height: 26px;
+	transition: all 0.4s ease 0s;
+}
+.blog_list h4 a:hover{
+	background-color: #8C8C8C;
+	cursor: pointer;
+	width: 100%;
+	text-shadow: 1px 1px 1px #FFF;
+	color: black;
+	padding-left: 40px;
+	text-decoration: none;
+}
+.blog_list li:nth-child(1){
+	display: block;
+	width: 120px;
+	height: 120px;
+	margin-right: 6px;
+}
+.blog_list li:nth-child(1) img{
+	height: 100%;
+	width: 100%;
+	display: block;
+}
+
+.blog_list li:nth-child(2) p{
+	text-indent: 33px;
+	text-overflow:ellipsis;
+	overflow:hidden;
+	height: 96px;
+	font-size: 13px;
+}
+.blog_list li:nth-child(3) a{
+	color: #F16E50;
+	transition: all 0.6s;
+	margin-left: 33px;
+}
+.blog_list li:nth-child(3) a:hover{
+	color:black;
+	text-decoration: underline;
+}
+.blog_list li:nth-child(4){
+	text-overflow: ellipsis;
+	background-color: #F6F6F6;
+	padding: 4px 0;
+	padding-left: 20px;
+	margin-top: 5px;
+}
+.blog_list li:nth-child(4) span{
+	margin-right:10px;
+}
+.blog_list li:nth-child(4) span i{
+	margin-right: 3px;
+}
+.blog_list li:nth-child(4) a{
+	cursor: pointer;
+	transition: all 0.3s;
+}
+.blog_list li:nth-child(4) a:hover{
+	color: red;
+}
+.blog_list li:nth-child(4) b{
+	font-weight: normal;
+	margin-right:10px;
+}
+.blog_list li:nth-child(4) b i{
+	margin-right: 3px;
+}
+

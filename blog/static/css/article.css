@@ -1,0 +1,261 @@
+/*详细页面样式
+ *author:mudong
+ * */
+/*文章页面板块左边*/
+.article-content-left{
+	background: #F1F0EE;
+}
+.article-content-left a{
+	color: #333333;
+	transition: all 0.5s ease 0s;
+}
+.article-content-left a:hover{
+	color: red;
+	text-decoration: underline;
+}
+
+/*文章类容板块右边*/
+.article-content-right{
+	background: #F1F0EE;
+	padding-left: 2%;
+}
+/*content-left类容左边*/
+/*文章标题*/
+.article-head{
+	font-size: 13px;
+	width: 100%;
+	text-overflow: ellipsis;
+	border-bottom: 2px solid #AC0B0B;
+	min-height: 30px;
+	line-height: 20px;
+}
+/*文章类容*/
+.article-body{
+	height: auto;
+	width: 96%;
+	margin: 0px auto;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	font-family: "Microsoft Yahei";
+	color:#000;
+}
+.article-body-head{
+	width: 100%;
+	text-align: center;
+	margin-bottom: 20px;
+}
+.article-push-info{
+	min-height: 30px;
+	line-height: 30px;
+	text-align: center;
+	border: 1px dashed #ccc;
+}
+.article-push-info span{
+	margin-left: 10px;
+}
+.article-content{
+	font-size: 14px;
+	color:#333;
+	margin-bottom: 40px;
+}
+.article-content img{
+	max-width: 100%;
+	max-height: 100%;
+}
+/*网页分享代码*/
+.article-share{
+	text-align: center;
+	margin-bottom: 30px;
+}
+.article-share div{
+	display: inline;
+}
+/*推荐和评论*/
+.article-relevant h3,.article-comment h3{
+	font-size: 16px;
+	height: 40px;
+	line-height: 40px;
+	border-bottom: 2px solid #AC0B0B;
+	margin-top:0px;
+}
+.article-relevant li{
+	display: inline-block;
+	margin:6px 0px;
+}
+/*评论*/
+.user-avatar{
+	max-width: 30px;
+	max-height: 30px;
+	transition: all 0.5s;
+	display: inline-block;
+	margin-right: 4px;
+}
+.user-avatar:hover{
+	transform: rotate(360deg);
+}
+.comment-user{
+	width: 100%;
+	height: 34px;
+	line-height: 34px;
+	margin-bottom: 2px;
+}
+.comment-content{
+	display: block;
+	width: 100%;
+	max-height: 90px;
+	overflow-y: auto;
+	padding:4px;
+	margin-bottom: 2px;
+	box-shadow: 0 0 2px 1px #ccc;
+}
+.comment-title{
+	width: 100%;
+	position: relative;
+	height: 30px;
+}
+.comment-submit{
+	background-color: #4CAF50;
+	width: 80px;
+	border: none;
+	color: white;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+/*用户表单样式*/
+.comment-userform{
+	width: 100%;
+	display: none;
+	position: relative;
+	border: 1px solid #CCCCCC;
+	margin-top: 6px;
+}
+.comment-userform b{
+	display: inline-block;
+	text-overflow: ellipsis;
+	padding-left: 3%;
+	margin-top: 40px;
+	
+}
+.comment-userform ul{
+	margin-top: 6px;
+	display: inline-block;
+	padding-left: 3%;
+	border-left: 1px dotted #CCCCCC;
+}
+.comment-userform li{
+	margin-bottom: 7px;
+	margin-top: 5px;
+	min-height: 32px;
+}
+.comment-userform li input{
+	width: 66%;
+	height: 30px;
+	margin-right: 10px;
+	padding-left: 6px;
+}
+.comment-userform li span{
+	margin-right: 4px;
+}
+.comment-userform li .error{
+	color:red;
+}
+.comment-userform-remove{
+	position: absolute;
+	top:0; right: 0;
+	cursor: pointer;
+}
+/*评论列表样式*/
+.article-comment-list h4{
+	padding-bottom: 10px;
+	border-bottom: 1px solid #CCCCCC;
+}
+.article-comment-list h4 span{
+	color: #AC0B0B;
+	margin-right: 6px;
+}
+.article-comment-list li{
+	width: 100%;
+	margin-bottom: 3px;
+}
+.comment-info-user-avatar{
+	max-width: 6%;
+	min-width: 6%;
+	transition: all 1s;
+}
+.comment-info-user-avatar:hover{
+	transform: rotate(360deg);
+}
+
+.comment-info{
+	width: 92%;
+	margin-left: 2%;
+	border: 1px solid #ccc;
+	min-height: 30px;
+	border-radius: 4px;
+	padding-left: 10px;
+	padding-top:7px;
+	box-shadow: 0 0 2px 1px #ccc;
+	position: relative;
+	background-color: white;
+}
+.comment-info-promt{
+	width: 12px;
+	height: 12px;
+	border-left: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	position: absolute;
+	top:13px;left: -6px;
+	transform: rotate(45deg);
+	background-color: white;
+}
+.comment-info-user span{
+	margin-right: 2%;
+}
+.comment-info-user span a{
+	color:#4CAF50;
+}
+.comment-info-user i{
+	margin-right: 4px;
+}
+.chlidren_comment{
+	margin-left: 4%;
+}
+/*子评论样式*/
+.chlidren_comment{
+	/*margin-top: -8px;*/
+}
+.chlidren_comment .comment-info {
+	max-width: 89%;
+}
+.chlidren_comment .comment-info-user-avatar{
+	max-width: 5%;
+	min-width: 5%;
+}
+
+/*文章板块右边*/
+/*搜索*/
+.search{
+	width: 96%;
+	margin: 7px auto;
+	border: 2px solid #AC0B0B;
+}
+.search input[type=text]{
+	height: 30px;
+	width: 80%;
+	padding-left: 2%;
+	border: none;
+	border-radius: none;
+}
+.search input[type=submit]{
+	width: 20%;
+	border: none;
+	float: right;
+	height: 30px;
+	color: white;
+	background-color: #AC0B0B;
+	transition: all 0.5s;
+}
+.search input[type=submit]:hover{
+	font-size: 14px;
+}

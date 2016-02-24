@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{#定义分类内容左边块#}
+{% block left_content %}
+    <div class="article-content-left col-lg-8 col-md-8 col-sm-12 col-xs-12">
+        {# 文章列表部分#}
+        <h4 class="article-head">
+            <span>有关<span style="color: red; font-weight: bold;margin: 0 6px">{{ search_words }}</span>的文章：</span>
+        </h4>
+        {% if article_list %}
+            {% include 'article_list.html' %}
+            {% include 'pagination.html' %}
+        {% else %}
+            <p>对不起！没有找到相关内容的文章！</p>
+        {% endif %}
+    </div>
+{% endblock %}
+
+{#定义分类内容右边块#}
+{% block right_content %}
+    <div class="article-content-right col-lg-4 col-md-4 hidden-sm hidden-xs">
+        {% include 'article_content_right.html' %}
+    </div>
+{% endblock %}

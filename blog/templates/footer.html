@@ -1,0 +1,50 @@
+{% load staticfiles %}
+<div class="footer">
+    <ul class="container">
+        <li>
+            <h4>版权声明</h4>
+            <div>
+                本站的文章和资源来自互联网或者站长
+                的原创，按照 CC BY -NC -SA 3.0 CN
+                协议发布和共享，转载或引用本站文章
+                应遵循相同协议。如果有侵犯版权的资
+                源请尽快联系站长，我们会在24h内删
+                除有争议的资源。
+            </div>
+        </li>
+        <li>
+            <h4>友情链接</h4>
+            <div>
+                <dl>
+                    {% for links in links_list %}
+                    <dd><a href="{{ links.callback_url }}">{{ links }}</a></dd>
+                    {% endfor %}
+                </dl>
+            </div>
+        </li>
+        <li>
+            <h4>博主微信</h4>
+            <div>
+                <img src="{%  static 'images/weixin.jpg' %}" title="关注博客微信，一起探讨互联网技术" />
+            </div>
+        </li>
+        <li>
+            <h4>网站信息</h4>
+            <div>
+                <p>7.21用一个月的时间，救活我死去的博客</p>
+                <p>7月8日，配合工信部复审完成</p>
+                <p>12月7日 谷歌第二次更新PR，博客PR到了2！</p>
+                <p>11月6日 site发现百度放出了第一个快照6.4</p>
+                <p>11月4日 百度建立了第一条索引</p>
+                <p>今日更新：4篇</p>
+                <p>本站运行：2年81天 </p>
+            </div>
+        </li>
+    </ul>
+</div>
+<div class="modal-footer" id="copy">
+    本站采用创作共用版权 CC BY-NC-ND/2.5/CN 许可协议 滇ICP备14002061号-1
+</div>
+<!--底部向上跳转按钮start-->
+<div class="turntop"></div>
+<!--底部向上跳转按钮end-->

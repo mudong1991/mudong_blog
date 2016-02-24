@@ -1,0 +1,707 @@
+2016-01-31 16:25:28,240 [Thread-30:8024] [django.request:98] [csrf:_reject] [WARNING]- Forbidden (CSRF token missing or incorrect.): /reg/
+2016-01-31 17:06:56,279 [Thread-28:6192] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2016-01-31 17:06:56,312 [Thread-29:7124] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2016-02-02 23:18:35,987 [Thread-48:8624] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2016-02-07 10:28:34,391 [Thread-69:3908] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2016-02-07 11:55:34,690 [Thread-641:4664] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2016-02-07 11:55:34,747 [Thread-640:6892] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2016-02-07 12:19:47,450 [Thread-643:7928] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\workspace\mudong_blog\blog\views.py", line 47, in index
+    return render(request, 'index.html', locals())
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\backends\django.py", line 74, in render
+    return self.template.render(context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\base.py", line 209, in render
+    return self._render(context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return template.render(context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\base.py", line 211, in render
+    return self._render(context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\defaulttags.py", line 161, in render
+    values = list(values)
+TypeError: 'int' object is not iterable
+2016-02-07 12:19:49,444 [Thread-644:7988] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\workspace\mudong_blog\blog\views.py", line 47, in index
+    return render(request, 'index.html', locals())
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\backends\django.py", line 74, in render
+    return self.template.render(context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\base.py", line 209, in render
+    return self._render(context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return template.render(context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\base.py", line 211, in render
+    return self._render(context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\defaulttags.py", line 161, in render
+    values = list(values)
+TypeError: 'int' object is not iterable
+2016-02-07 12:38:52,763 [Thread-2:7420] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\workspace\mudong_blog\blog\views.py", line 47, in index
+    return render(request, 'index.html', locals())
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\backends\django.py", line 74, in render
+    return self.template.render(context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\base.py", line 209, in render
+    return self._render(context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\loader_tags.py", line 151, in render
+    template = context.template.engine.get_template(template)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\engine.py", line 167, in get_template
+    template, origin = self.find_template(template_name, dirs)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\engine.py", line 141, in find_template
+    source, display_name = loader(name, dirs)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\loaders\base.py", line 13, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\loaders\base.py", line 23, in load_template
+    template = Template(source, origin, template_name, self.engine)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\base.py", line 190, in __init__
+    self.nodelist = engine.compile_string(template_string, origin)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\engine.py", line 261, in compile_string
+    return parser.parse()
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\base.py", line 341, in parse
+    compiled_result = compile_func(self, token)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\defaulttags.py", line 872, in do_for
+    nodelist_loop = parser.parse(('empty', 'endfor',))
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\base.py", line 341, in parse
+    compiled_result = compile_func(self, token)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\defaulttags.py", line 1013, in do_if
+    condition = TemplateIfParser(parser, bits).parse()
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\defaulttags.py", line 945, in __init__
+    super(TemplateIfParser, self).__init__(*args, **kwargs)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\smartif.py", line 168, in __init__
+    mapped_tokens.append(self.translate_token(token))
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\smartif.py", line 179, in translate_token
+    return self.create_var(token)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\defaulttags.py", line 948, in create_var
+    return TemplateLiteral(self.template_parser.compile_filter(value), value)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\base.py", line 423, in compile_filter
+    return FilterExpression(token, self)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\base.py", line 639, in __init__
+    "from '%s'" % (token[upto:], token))
+TemplateSyntaxError: Could not parse the remainder: '-1' from 'i-1'
+2016-02-15 14:57:48,558 [Thread-2:5180] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\workspace\mudong_blog\blog\views.py", line 55, in index
+    return render(request, 'index.html', locals())
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\backends\django.py", line 74, in render
+    return self.template.render(context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\base.py", line 209, in render
+    return self._render(context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return template.render(context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\base.py", line 211, in render
+    return self._render(context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\defaulttags.py", line 162, in render
+    len_values = len(values)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\db\models\query.py", line 144, in __len__
+    self._fetch_all()
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\db\models\query.py", line 965, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\db\models\query.py", line 238, in iterator
+    results = compiler.execute_sql()
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\db\models\sql\compiler.py", line 840, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\db\utils.py", line 97, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\db\backends\mysql\base.py", line 124, in execute
+    return self.cursor.execute(query, args)
+  File "c:\users\admini~1\appdata\local\temp\easy_install-uvj4nt\MySQL_python-1.2.5-py2.7-win32.egg.tmp\MySQLdb\cursors.py", line 205, in execute
+    self.errorhandler(self, exc, value)
+  File "c:\users\admini~1\appdata\local\temp\easy_install-uvj4nt\MySQL_python-1.2.5-py2.7-win32.egg.tmp\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+ProgrammingError: (1146, "Table 'mudong_blog.blog_article' doesn't exist")
+2016-02-15 14:57:59,095 [Thread-4:6016] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2016-02-15 14:58:16,200 [Thread-5:5388] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\workspace\mudong_blog\blog\views.py", line 55, in index
+    return render(request, 'index.html', locals())
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\backends\django.py", line 74, in render
+    return self.template.render(context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\base.py", line 209, in render
+    return self._render(context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return template.render(context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\base.py", line 211, in render
+    return self._render(context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\defaulttags.py", line 162, in render
+    len_values = len(values)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\db\models\query.py", line 144, in __len__
+    self._fetch_all()
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\db\models\query.py", line 965, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\db\models\query.py", line 238, in iterator
+    results = compiler.execute_sql()
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\db\models\sql\compiler.py", line 840, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\db\utils.py", line 97, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\db\backends\utils.py", line 64, in execute
+    return self.cursor.execute(sql, params)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\db\backends\mysql\base.py", line 124, in execute
+    return self.cursor.execute(query, args)
+  File "c:\users\admini~1\appdata\local\temp\easy_install-uvj4nt\MySQL_python-1.2.5-py2.7-win32.egg.tmp\MySQLdb\cursors.py", line 205, in execute
+    self.errorhandler(self, exc, value)
+  File "c:\users\admini~1\appdata\local\temp\easy_install-uvj4nt\MySQL_python-1.2.5-py2.7-win32.egg.tmp\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+ProgrammingError: (1146, "Table 'mudong_blog.blog_article' doesn't exist")
+2016-02-15 15:49:26,451 [Thread-2:6652] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /article/
+Traceback (most recent call last):
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\core\urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\core\urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\core\urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\workspace\mudong_blog\mudong_blog\urls.py", line 28, in <module>
+    url(r'^', include('blog.urls')),
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\workspace\mudong_blog\blog\urls.py", line 9, in <module>
+    url(r'^', categroy, name='category'),
+NameError: name 'categroy' is not defined
+2016-02-15 15:49:27,438 [Thread-3:6476] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\core\handlers\base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\middleware\common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\core\urlresolvers.py", line 646, in is_valid_path
+    resolve(path, urlconf)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\core\urlresolvers.py", line 521, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\core\urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\core\urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\core\urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\workspace\mudong_blog\mudong_blog\urls.py", line 28, in <module>
+    url(r'^', include('blog.urls')),
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\workspace\mudong_blog\blog\urls.py", line 9, in <module>
+    url(r'^', categroy, name='category'),
+NameError: name 'categroy' is not defined
+2016-02-15 15:49:27,831 [Thread-4:6504] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\core\handlers\base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\middleware\common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\core\urlresolvers.py", line 646, in is_valid_path
+    resolve(path, urlconf)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\core\urlresolvers.py", line 521, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\core\urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\core\urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\core\urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\workspace\mudong_blog\mudong_blog\urls.py", line 28, in <module>
+    url(r'^', include('blog.urls')),
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\workspace\mudong_blog\blog\urls.py", line 9, in <module>
+    url(r'^', categroy, name='category'),
+NameError: name 'categroy' is not defined
+2016-02-15 16:00:54,528 [Thread-7:672] [django.request:170] [base:get_response] [WARNING]- Not Found: /category/web相关
+2016-02-15 16:01:28,328 [Thread-9:6212] [django.request:170] [base:get_response] [WARNING]- Not Found: /category/django
+2016-02-15 16:02:44,648 [Thread-2:6068] [django.request:170] [base:get_response] [WARNING]- Not Found: /category/django
+2016-02-15 16:02:46,279 [Thread-3:5240] [django.request:170] [base:get_response] [WARNING]- Not Found: /category/django
+2016-02-15 16:02:57,710 [Thread-4:820] [django.request:170] [base:get_response] [WARNING]- Not Found: /category/django
+2016-02-15 16:11:01,760 [Thread-2:4796] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /category/python/
+Traceback (most recent call last):
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: categroy() got an unexpected keyword argument 'category_name'
+2016-02-15 16:32:38,158 [Thread-16:1400] [django.request:170] [base:get_response] [WARNING]- Not Found: /category/uploads/article/2016/01/img_G9Oytc3.jpg
+2016-02-15 16:32:38,210 [Thread-17:5500] [django.request:170] [base:get_response] [WARNING]- Not Found: /category/uploads/article/2016/01/img.jpg
+2016-02-15 16:32:38,211 [Thread-18:4900] [django.request:170] [base:get_response] [WARNING]- Not Found: /category/uploads/article/default.jpg
+2016-02-15 16:33:13,894 [Thread-41:6496] [django.request:170] [base:get_response] [WARNING]- Not Found: /category/uploads/article/2016/01/img_G9Oytc3.jpg
+2016-02-15 16:33:13,926 [Thread-42:3040] [django.request:170] [base:get_response] [WARNING]- Not Found: /category/uploads/article/default.jpg
+2016-02-15 16:33:13,943 [Thread-43:5912] [django.request:170] [base:get_response] [WARNING]- Not Found: /category/uploads/article/2016/01/img.jpg
+2016-02-15 16:35:45,072 [Thread-16:6136] [django.request:170] [base:get_response] [WARNING]- Not Found: /category/uploads/article/2016/01/img_G9Oytc3.jpg
+2016-02-15 16:35:45,117 [Thread-17:4836] [django.request:170] [base:get_response] [WARNING]- Not Found: /category/uploads/article/2016/01/img.jpg
+2016-02-15 16:35:45,134 [Thread-18:320] [django.request:170] [base:get_response] [WARNING]- Not Found: /category/uploads/article/default.jpg
+2016-02-15 16:35:59,035 [Thread-17:6040] [django.request:170] [base:get_response] [WARNING]- Not Found: /category/uploads/article/2016/01/img_G9Oytc3.jpg
+2016-02-15 16:35:59,065 [Thread-18:5240] [django.request:170] [base:get_response] [WARNING]- Not Found: /category/uploads/article/2016/01/img.jpg
+2016-02-15 16:35:59,069 [Thread-19:6356] [django.request:170] [base:get_response] [WARNING]- Not Found: /category/uploads/article/default.jpg
+2016-02-15 16:36:14,719 [Thread-33:6668] [django.request:170] [base:get_response] [WARNING]- Not Found: /category/uploads/article/2016/01/img_G9Oytc3.jpg
+2016-02-15 16:36:14,776 [Thread-34:1264] [django.request:170] [base:get_response] [WARNING]- Not Found: /category/uploads/article/2016/01/img.jpg
+2016-02-15 16:36:14,792 [Thread-35:6164] [django.request:170] [base:get_response] [WARNING]- Not Found: /category/uploads/article/default.jpg
+2016-02-15 16:36:23,016 [Thread-39:6132] [django.request:170] [base:get_response] [WARNING]- Not Found: /category/uploads/article/2016/01/img_G9Oytc3.jpg
+2016-02-15 16:36:23,039 [Thread-41:4568] [django.request:170] [base:get_response] [WARNING]- Not Found: /category/uploads/article/default.jpg
+2016-02-15 16:36:23,062 [Thread-42:5076] [django.request:170] [base:get_response] [WARNING]- Not Found: /category/uploads/article/2016/01/img.jpg
+2016-02-15 16:40:23,198 [Thread-48:7008] [django.request:170] [base:get_response] [WARNING]- Not Found: /category/uploads/article/2016/01/img_G9Oytc3.jpg
+2016-02-15 16:40:23,276 [Thread-49:6504] [django.request:170] [base:get_response] [WARNING]- Not Found: /category/uploads/article/2016/01/img.jpg
+2016-02-15 16:40:23,296 [Thread-50:6732] [django.request:170] [base:get_response] [WARNING]- Not Found: /category/uploads/article/default.jpg
+2016-02-15 16:41:16,862 [Thread-67:2816] [django.request:170] [base:get_response] [WARNING]- Not Found: /category/uploads/article/2016/01/img_G9Oytc3.jpg
+2016-02-15 16:41:16,864 [Thread-68:4360] [django.request:170] [base:get_response] [WARNING]- Not Found: /category/uploads/article/2016/01/img.jpg
+2016-02-15 16:41:17,186 [Thread-69:7096] [django.request:170] [base:get_response] [WARNING]- Not Found: /category/uploads/article/default.jpg
+2016-02-15 16:45:57,821 [Thread-98:6444] [django.request:170] [base:get_response] [WARNING]- Not Found: /category/uploads/article/2016/01/img_G9Oytc3.jpg
+2016-02-15 16:45:57,859 [Thread-99:1400] [django.request:170] [base:get_response] [WARNING]- Not Found: /category/uploads/article/2016/01/img.jpg
+2016-02-15 16:45:57,905 [Thread-101:6376] [django.request:170] [base:get_response] [WARNING]- Not Found: /category/uploads/article/default.jpg
+2016-02-15 16:57:14,295 [Thread-124:2976] [django.request:170] [base:get_response] [WARNING]- Not Found: /category/uploads/article/2016/01/img_G9Oytc3.jpg
+2016-02-15 16:57:14,339 [Thread-125:6316] [django.request:170] [base:get_response] [WARNING]- Not Found: /category/uploads/article/default.jpg
+2016-02-15 16:57:14,361 [Thread-126:6720] [django.request:170] [base:get_response] [WARNING]- Not Found: /category/uploads/article/2016/01/img.jpg
+2016-02-15 16:57:57,618 [Thread-139:4308] [django.request:170] [base:get_response] [WARNING]- Not Found: /category/uploads/article/2016/01/img_G9Oytc3.jpg
+2016-02-15 16:57:57,644 [Thread-140:4116] [django.request:170] [base:get_response] [WARNING]- Not Found: /category/uploads/article/default.jpg
+2016-02-15 16:57:57,660 [Thread-141:2308] [django.request:170] [base:get_response] [WARNING]- Not Found: /category/uploads/article/2016/01/img.jpg
+2016-02-15 16:57:58,042 [Thread-142:5720] [django.request:170] [base:get_response] [WARNING]- Not Found: /category/uploads/article/2016/01/img_G9Oytc3.jpg
+2016-02-15 16:57:58,142 [Thread-143:5356] [django.request:170] [base:get_response] [WARNING]- Not Found: /category/uploads/article/2016/01/img.jpg
+2016-02-15 16:57:58,168 [Thread-144:4820] [django.request:170] [base:get_response] [WARNING]- Not Found: /category/uploads/article/default.jpg
+2016-02-15 18:03:49,094 [Thread-26:6348] [django.request:170] [base:get_response] [WARNING]- Not Found: /admin/blog/9/
+2016-02-16 08:30:06,950 [Thread-24:2188] [django.request:170] [base:get_response] [WARNING]- Not Found: /uploads/article/2016/02/psb.jpg
+2016-02-16 08:30:07,302 [Thread-25:2940] [django.request:170] [base:get_response] [WARNING]- Not Found: /uploads/article/2016/02/psb.jpg
+2016-02-16 08:30:15,223 [Thread-42:4572] [django.request:170] [base:get_response] [WARNING]- Not Found: /uploads/article/2016/02/psb.jpg
+2016-02-16 08:30:39,309 [Thread-68:7464] [django.request:170] [base:get_response] [WARNING]- Not Found: /uploads/article/2016/02/psb.jpg
+2016-02-16 08:32:43,332 [Thread-16:5616] [django.request:170] [base:get_response] [WARNING]- Not Found: /uploads/article/2016/02/psb.jpg
+2016-02-16 08:32:43,706 [Thread-21:8176] [django.request:170] [base:get_response] [WARNING]- Not Found: /uploads/article/2016/02/psb.jpg
+2016-02-16 08:32:46,420 [Thread-55:6540] [django.request:170] [base:get_response] [WARNING]- Not Found: /uploads/article/2016/02/psb.jpg
+2016-02-16 08:32:46,714 [Thread-60:7820] [django.request:170] [base:get_response] [WARNING]- Not Found: /uploads/article/2016/02/psb.jpg
+2016-02-16 08:33:47,066 [Thread-95:5224] [django.request:170] [base:get_response] [WARNING]- Not Found: /uploads/article/2016/02/psb.jpg
+2016-02-16 08:33:47,585 [Thread-100:5608] [django.request:170] [base:get_response] [WARNING]- Not Found: /uploads/article/2016/02/psb.jpg
+2016-02-16 08:33:52,874 [Thread-121:4028] [django.request:170] [base:get_response] [WARNING]- Not Found: /uploads/article/2016/02/psb.jpg
+2016-02-16 08:33:53,609 [Thread-136:5336] [django.request:170] [base:get_response] [WARNING]- Not Found: /uploads/article/2016/02/psb.jpg
+2016-02-16 08:33:53,917 [Thread-137:788] [django.request:170] [base:get_response] [WARNING]- Not Found: /uploads/article/2016/02/psb.jpg
+2016-02-16 08:34:18,266 [Thread-16:6008] [django.request:170] [base:get_response] [WARNING]- Not Found: /uploads/article/2016/02/psb.jpg
+2016-02-16 08:34:20,848 [Thread-46:5828] [django.request:170] [base:get_response] [WARNING]- Not Found: /uploads/article/2016/02/psb.jpg
+2016-02-16 08:34:21,038 [Thread-47:4100] [django.request:170] [base:get_response] [WARNING]- Not Found: /uploads/article/2016/02/psb.jpg
+2016-02-16 08:34:22,121 [Thread-77:5932] [django.request:170] [base:get_response] [WARNING]- Not Found: /uploads/article/2016/02/psb.jpg
+2016-02-16 08:34:24,341 [Thread-107:7184] [django.request:170] [base:get_response] [WARNING]- Not Found: /uploads/article/2016/02/psb.jpg
+2016-02-16 08:34:24,622 [Thread-112:7572] [django.request:170] [base:get_response] [WARNING]- Not Found: /uploads/article/2016/02/psb.jpg
+2016-02-16 08:34:36,289 [Thread-16:7832] [django.request:170] [base:get_response] [WARNING]- Not Found: /uploads/article/2016/02/psb.jpg
+2016-02-16 08:34:44,525 [Thread-46:7700] [django.request:170] [base:get_response] [WARNING]- Not Found: /uploads/article/2016/02/psb.jpg
+2016-02-16 08:34:44,811 [Thread-50:6288] [django.request:170] [base:get_response] [WARNING]- Not Found: /uploads/article/2016/02/psb.jpg
+2016-02-16 08:35:07,957 [Thread-81:6680] [django.request:170] [base:get_response] [WARNING]- Not Found: /uploads/article/2016/02/psb.jpg
+2016-02-16 08:40:57,328 [Thread-19:5804] [django.request:170] [base:get_response] [WARNING]- Not Found: /uploads/article/2016/02/img.jpg
+2016-02-16 08:40:57,729 [Thread-24:7448] [django.request:170] [base:get_response] [WARNING]- Not Found: /uploads/article/2016/02/img.jpg
+2016-02-16 08:42:00,404 [Thread-75:7320] [django.request:170] [base:get_response] [WARNING]- Not Found: /article/2016/02/img.jpg
+2016-02-16 08:42:02,779 [Thread-105:7760] [django.request:170] [base:get_response] [WARNING]- Not Found: /article/2016/02/img.jpg
+2016-02-16 08:42:21,595 [Thread-142:1636] [django.request:170] [base:get_response] [WARNING]- Not Found: /article/2016/02/img.jpg
+2016-02-16 08:42:22,023 [Thread-145:7336] [django.request:170] [base:get_response] [WARNING]- Not Found: /article/2016/02/img.jpg
+2016-02-16 08:43:39,846 [Thread-184:7796] [django.request:170] [base:get_response] [WARNING]- Not Found: /uploads//uploads/article/2016/01/img_G9Oytc3.jpg
+2016-02-16 08:43:39,868 [Thread-185:1052] [django.request:170] [base:get_response] [WARNING]- Not Found: /uploads//uploads/article/2016/01/img.jpg
+2016-02-16 08:43:39,882 [Thread-186:7484] [django.request:170] [base:get_response] [WARNING]- Not Found: /uploads//uploads/article/2016/01/logo.png
+2016-02-16 08:48:04,207 [Thread-280:2816] [django.request:170] [base:get_response] [WARNING]- Not Found: /article/avatar/default.jpg
+2016-02-16 08:51:11,479 [Thread-320:5316] [django.request:170] [base:get_response] [WARNING]- Not Found: /article/avatar/default.jpg
+2016-02-16 08:51:11,503 [Thread-322:3952] [django.request:170] [base:get_response] [WARNING]- Not Found: /article/avatar/2016/01/img.jpg
+2016-02-16 08:51:11,869 [Thread-323:7500] [django.request:170] [base:get_response] [WARNING]- Not Found: /article/avatar/default.jpg
+2016-02-16 08:51:11,894 [Thread-324:4568] [django.request:170] [base:get_response] [WARNING]- Not Found: /article/avatar/2016/01/img.jpg
+2016-02-16 08:51:49,799 [Thread-344:7924] [django.request:170] [base:get_response] [WARNING]- Not Found: /article/avatar/default.jpg
+2016-02-16 09:34:01,029 [Thread-175:7884] [django.request:170] [base:get_response] [WARNING]- Not Found: /category/web相关/category/django
+2016-02-16 09:34:10,802 [Thread-178:7800] [django.request:170] [base:get_response] [WARNING]- Not Found: /category/web相关/category/web相关
+2016-02-16 09:34:17,963 [Thread-179:7480] [django.request:170] [base:get_response] [WARNING]- Not Found: /category/web相关/category/web相关
+2016-02-16 09:34:22,532 [Thread-180:7876] [django.request:170] [base:get_response] [WARNING]- Not Found: /category/web相关/category/python
+2016-02-16 09:34:26,673 [Thread-189:4464] [django.request:170] [base:get_response] [WARNING]- Not Found: /category/web相关/category/web相关
+2016-02-16 11:11:37,885 [Thread-318:4500] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\workspace\mudong_blog\blog\views.py", line 54, in index
+    return render(request, 'index.html', locals())
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\backends\django.py", line 74, in render
+    return self.template.render(context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\base.py", line 209, in render
+    return self._render(context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\loader_tags.py", line 151, in render
+    template = context.template.engine.get_template(template)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\engine.py", line 167, in get_template
+    template, origin = self.find_template(template_name, dirs)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\engine.py", line 141, in find_template
+    source, display_name = loader(name, dirs)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\loaders\base.py", line 13, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\loaders\base.py", line 23, in load_template
+    template = Template(source, origin, template_name, self.engine)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\base.py", line 190, in __init__
+    self.nodelist = engine.compile_string(template_string, origin)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\engine.py", line 261, in compile_string
+    return parser.parse()
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\base.py", line 341, in parse
+    compiled_result = compile_func(self, token)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\defaulttags.py", line 1013, in do_if
+    condition = TemplateIfParser(parser, bits).parse()
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\smartif.py", line 197, in parse
+    retval = self.expression()
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\smartif.py", line 207, in expression
+    left = t.nud(self)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\smartif.py", line 150, in nud
+    raise parser.error_class("Unexpected end of expression in if tag.")
+TemplateSyntaxError: Unexpected end of expression in if tag.
+2016-02-16 14:35:17,538 [Thread-74:8860] [django.request:170] [base:get_response] [WARNING]- Not Found: /comment/reply/21
+2016-02-16 16:53:31,201 [Thread-2:5304] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /
+Traceback (most recent call last):
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\core\handlers\base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\core\urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\core\urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\core\urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\workspace\mudong_blog\mudong_blog\urls.py", line 28, in <module>
+    url(r'^', include('blog.urls')),
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\conf\urls\__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "C:\Python27\Lib\importlib\__init__.py", line 37, in import_module
+    __import__(name)
+  File "D:\workspace\mudong_blog\blog\urls.py", line 15, in <module>
+    url(r''),
+TypeError: url() takes at least 2 arguments (1 given)
+2016-02-16 18:22:53,170 [Thread-12:2768] [django.request:98] [csrf:_reject] [WARNING]- Forbidden (CSRF token missing or incorrect.): /search/
+2016-02-16 18:23:55,052 [Thread-14:7312] [django.request:98] [csrf:_reject] [WARNING]- Forbidden (CSRF token missing or incorrect.): /search/
+2016-02-16 18:24:19,089 [Thread-39:6608] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /search/
+Traceback (most recent call last):
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\workspace\mudong_blog\blog\views.py", line 107, in search
+    return render(request, 'search.html', locals())
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\backends\django.py", line 74, in render
+    return self.template.render(context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\base.py", line 209, in render
+    return self._render(context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\loader_tags.py", line 151, in render
+    template = context.template.engine.get_template(template)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\engine.py", line 167, in get_template
+    template, origin = self.find_template(template_name, dirs)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\engine.py", line 146, in find_template
+    raise TemplateDoesNotExist(name)
+TemplateDoesNotExist: paginatioln.html
+2016-02-16 18:27:09,936 [Thread-25:348] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /search/
+Traceback (most recent call last):
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\workspace\mudong_blog\blog\views.py", line 113, in search
+    return render(request, 'search.html', locals())
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\loader.py", line 99, in render_to_string
+    return template.render(context, request)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\backends\django.py", line 74, in render
+    return self.template.render(context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\base.py", line 209, in render
+    return self._render(context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\loader_tags.py", line 135, in render
+    return compiled_parent._render(context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\base.py", line 201, in _render
+    return self.nodelist.render(context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\base.py", line 903, in render
+    bit = self.render_node(node, context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\debug.py", line 79, in render_node
+    return node.render(context)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\loader_tags.py", line 151, in render
+    template = context.template.engine.get_template(template)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\engine.py", line 167, in get_template
+    template, origin = self.find_template(template_name, dirs)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\template\engine.py", line 146, in find_template
+    raise TemplateDoesNotExist(name)
+TemplateDoesNotExist: paginatioln.html
+2016-02-16 23:04:33,513 [Thread-52:4964] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2016-02-16 23:04:33,640 [Thread-53:7840] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2016-02-16 23:06:15,661 [Thread-64:8720] [django.request:98] [csrf:_reject] [WARNING]- Forbidden (CSRF token missing or incorrect.): /admin/login/
+2016-02-22 15:28:23,953 [Thread-58:6484] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2016-02-22 15:28:23,977 [Thread-59:6488] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2016-02-22 15:35:22,260 [Thread-107:5592] [django.request:256] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /admin/blog/tag/add/
+Traceback (most recent call last):
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\core\handlers\base.py", line 132, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\contrib\admin\options.py", line 616, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\utils\decorators.py", line 110, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\views\decorators\cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\contrib\admin\sites.py", line 222, in inner
+    if not self.has_permission(request):
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\contrib\admin\sites.py", line 162, in has_permission
+    return request.user.is_active and request.user.is_staff
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\utils\functional.py", line 225, in inner
+    self._setup()
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\utils\functional.py", line 365, in _setup
+    self._wrapped = self._setupfunc()
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\contrib\auth\middleware.py", line 22, in <lambda>
+    request.user = SimpleLazyObject(lambda: get_user(request))
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\contrib\auth\middleware.py", line 10, in get_user
+    request._cached_user = auth.get_user(request)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\contrib\auth\__init__.py", line 167, in get_user
+    user_id = _get_user_session_key(request)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\contrib\auth\__init__.py", line 59, in _get_user_session_key
+    return get_user_model()._meta.pk.to_python(request.session[SESSION_KEY])
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\contrib\sessions\backends\base.py", line 48, in __getitem__
+    return self._session[key]
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\contrib\sessions\backends\base.py", line 181, in _get_session
+    self._session_cache = self.load()
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\contrib\sessions\backends\db.py", line 21, in load
+    expire_date__gt=timezone.now()
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\db\models\manager.py", line 127, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\db\models\query.py", line 328, in get
+    num = len(clone)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\db\models\query.py", line 144, in __len__
+    self._fetch_all()
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\db\models\query.py", line 965, in _fetch_all
+    self._result_cache = list(self.iterator())
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\db\models\query.py", line 238, in iterator
+    results = compiler.execute_sql()
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\db\models\sql\compiler.py", line 838, in execute_sql
+    cursor = self.connection.cursor()
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\db\backends\base\base.py", line 162, in cursor
+    cursor = self.make_debug_cursor(self._cursor())
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\db\backends\base\base.py", line 135, in _cursor
+    self.ensure_connection()
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\db\backends\base\base.py", line 130, in ensure_connection
+    self.connect()
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\db\utils.py", line 97, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\db\backends\base\base.py", line 130, in ensure_connection
+    self.connect()
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\db\backends\base\base.py", line 119, in connect
+    self.connection = self.get_new_connection(conn_params)
+  File "D:\workspace\blog_project_venv\lib\site-packages\django\db\backends\mysql\base.py", line 276, in get_new_connection
+    conn = Database.connect(**conn_params)
+  File "c:\users\admini~1\appdata\local\temp\easy_install-uvj4nt\MySQL_python-1.2.5-py2.7-win32.egg.tmp\MySQLdb\__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "c:\users\admini~1\appdata\local\temp\easy_install-uvj4nt\MySQL_python-1.2.5-py2.7-win32.egg.tmp\MySQLdb\connections.py", line 193, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (2003, "Can't connect to MySQL server on '104.224.172.75' (10060)")
+2016-02-22 16:04:30,059 [Thread-43:6060] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2016-02-22 16:15:35,569 [Thread-22:3616] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2016-02-22 16:15:46,757 [Thread-35:5868] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2016-02-22 16:33:26,604 [Thread-117:6580] [django.request:170] [base:get_response] [WARNING]- Not Found: /article/index.html
+2016-02-22 16:33:31,710 [Thread-118:2564] [django.request:170] [base:get_response] [WARNING]- Not Found: /index.html
+2016-02-22 16:37:15,507 [Thread-43:6424] [django.request:170] [base:get_response] [WARNING]- Not Found: /favicon.ico

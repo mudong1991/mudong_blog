@@ -1,0 +1,160 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/login_reg.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrapValidator.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}" />
+    <!--[if IE 7]>
+    <link rel="stylesheet" href="{% static 'css/font-awesome-ie7.min.css' %}">
+    <![endif]-->
+
+    <script type="text/javascript" src="{% static 'js/jquery-1.11.1.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery-migrate-1.2.1.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/bootstrapValidator.min.js' %}" ></script>
+    <script type="text/javascript" src="{% static 'js/snowfall.jquery.js' %}" ></script>
+    <title>{{ title }}</title>
+</head>
+<body>
+    <!--注册表单-->
+
+    <div class="box-show">
+
+        <div class="box-contain">
+            <div class="login-box">
+                <div class="login-title text-center">
+                    <h2><small>欢迎注册</small></h2>
+                </div>
+                <!--登录表单-->
+                <form action="{% url 'reg' %}" method="post" id="login_form" class="form-horizontal" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <div class="form-group" >
+                        <label class="col-lg-3 col-md-3 col-sm-3 col-xs-12 control-label"><i class="glyphicon glyphicon-user"></i> *用户名</label>
+                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                            {{ reg_form.username }}
+                        </div>
+                    </div>
+
+                    <div class="form-group" >
+                        <label class="col-lg-3 col-md-3 col-sm-3 col-xs-12 control-label"><i class="glyphicon glyphicon-envelope"></i> *邮箱</label>
+                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                            {{ reg_form.email }}
+                        </div>
+                    </div>
+
+                    <div class="form-group" >
+                        <label class="col-lg-3 col-md-3 col-sm-3 col-xs-12 control-label"><i class="glyphicon glyphicon-lock"></i> *密码</label>
+                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                            {{ reg_form.password }}
+                        </div>
+                    </div>
+
+                    <div class="form-group" >
+                        <label class="col-lg-3 col-md-3 col-sm-3 col-xs-12 control-label"><i class="glyphicon glyphicon-lock"></i>*确认密码</label>
+                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                            <input class="form-control" id="user-password-confirm" maxlength="30" name="confirm_password" placeholder="确认密码" required="required" type="password">
+                        </div>
+                    </div>
+
+                    <div class="form-group" >
+                        <label class="col-lg-3 col-md-3 col-sm-3 col-xs-12 control-label"><i class="glyphicon glyphicon-globe"></i>  个人网址</label>
+                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                            {{ reg_form.url }}
+                        </div>
+                    </div>
+
+                    <div class="form-group" >
+                        <label class="col-lg-3 col-md-3 col-sm-3 col-xs-12 control-label"><i class="glyphicon glyphicon-picture"></i>  头像</label>
+                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                            {{ reg_form.avatar }}
+                        </div>
+                    </div>
+
+                    <div class="form-group form-actions">
+                        <div class="col-xs-4 col-xs-offset-4 ">
+                            <button type="submit" class="btn btn-primary btn-lg"><i class="glyphicon glyphicon-check"></i> 注    册</button>
+                        </div>
+                    </div>
+
+
+                    <input type="hidden" name="source_url" value="{{ request.META.HTTP_REFERER }}">
+                </form>
+                <!--注册表单end-->
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+
+    $(document).ready(function(){
+        //下雪效果
+        $('.box-show').snowfall('clear');
+        $('.box-show').snowfall({
+        	image: "/static/images/snow.gif",
+        	flakeColor:'#fff',
+            flakeCount:20,
+            minSize: 5,
+            maxSize: 16
+        });
+        //注册表单验证
+        $('#login_form').bootstrapValidator({
+            message:'信息有误，登录失败',
+            feedbackIcons: {
+                valid: 'glyphicon glyphicon-ok',
+                invalid: 'glyphicon glyphicon-remove',
+                validating: 'glyphicon glyphicon-refresh'
+            },
+            fields:{
+                username:{
+                    message: '用户名信息有误',
+                    validators:{
+                        notEmpty: {
+                                message: '用户名不能为空!'
+                            },
+                        stringLength: {
+                            min: 1,
+                            max: 30,
+                            message: '用户名的长度必须在1-30个字符'
+                        },
+                    }
+                },
+                email:{
+                   validators:{
+                       notEmpty: {
+                           message: '邮箱不能为空!'
+                       },
+                       emailAddress:{
+                           message: '邮箱的格式不正确！'
+                       }
+                   }
+                },
+                password:{
+                    validators:{
+                        notEmpty: {
+                            message: '密码不能为空!'
+                        },
+                   }
+                },
+                confirm_password:{
+                    validators:{
+                       notEmpty: {
+                           message: '确认密码不能为空!'
+                       },
+                       identical:{
+                           field: 'password',
+                           message: '两次密码输入的不一致！'
+                       }
+                   }
+                },
+                url:{
+                    message:'请输入合法的url地址'
+                }
+            }
+        })
+    })
+    </script>
+</body>
+</html>

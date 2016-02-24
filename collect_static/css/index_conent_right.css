@@ -1,0 +1,48 @@
+/*右边类容*/
+.content-right{
+	background-color: rgba(255,255,255,0.6);
+}
+/*右边类容1-菜单*/
+.menu{
+	width: 98%;
+	margin: 0px auto;
+	text-align: center;
+}
+.menu li{
+	display: inline-block;
+	width: 32%;
+	line-height: 74px;
+	height: 74px;
+	margin-top: 8px;
+	text-align: center;
+	font-size: 14px;
+}
+.menu li:nth-child(1){
+	background: #71A532 none repeat scroll 0% 0%;
+}
+.menu li:nth-child(2){
+	background: #F90 none repeat scroll 0% 0%;
+}
+.menu li:nth-child(3){
+	background: #8C49AD none repeat scroll 0% 0%;
+}
+.menu li:nth-child(4){
+	background: #E7769E none repeat scroll 0% 0%;
+}
+.menu li:nth-child(5){
+	background: #A98659 none repeat scroll 0% 0%;
+}
+.menu li:nth-child(6){
+	background: #63A8E8 none repeat scroll 0% 0%;
+}
+.menu li a{
+	display: block;
+	color: white;
+	transition: all 0.5s ease 0s;
+}
+.menu li a:hover{
+	transform: rotate(360deg);
+	background: rgba(255, 255, 255, 0.2) none repeat scroll 0% 0%;
+	font-weight: bold;
+	text-shadow: 1px 1px 1px black;
+}
